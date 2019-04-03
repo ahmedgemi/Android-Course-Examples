@@ -52,11 +52,22 @@ public class MainActivity extends AppCompatActivity {
         builder.setContentText("Welcome " + String.valueOf(new Random().nextInt(50)));
         builder.setSmallIcon(R.drawable.baseline_mail_outline_black_36);
 
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,HomeActivity.class);
+        intent.putExtra("data", "HeLLo !!");
+        PendingIntent pending = PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_ONE_SHOT);
 
-        PendingIntent pending = PendingIntent.getActivity(this,0,intent,0);
+        Intent intent2 = new Intent(this,HomeActivity.class);
+        intent2.putExtra("data", "LIKE ACTION");
+        PendingIntent pending2 = PendingIntent.getActivity(this,1,intent2,PendingIntent.FLAG_ONE_SHOT);
+
+        Intent intent3 = new Intent(this,HomeActivity.class);
+        intent3.putExtra("data", "REPLAY ACTION");
+        PendingIntent pending3 = PendingIntent.getActivity(this,2,intent3,PendingIntent.FLAG_ONE_SHOT);
 
         builder.setContentIntent(pending);
+
+        builder.addAction(0,"Like",pending2);
+        builder.addAction(0,"Replay",pending3);
 
         Notification notification = builder.build();
 
