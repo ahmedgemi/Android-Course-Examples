@@ -4,11 +4,20 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.widget.ProgressBar;
 
 public class TabAdapter extends FragmentPagerAdapter {
 
+    ToDoFragment toDoFragment = new ToDoFragment();
+    ProgressFragment progressFragment = new ProgressFragment();
+    DoneFragment doneFragment = new DoneFragment();
+
     public TabAdapter(FragmentManager fm) {
         super(fm);
+
+        toDoFragment.setListener(progressFragment);
+
+        progressFragment.setListener(doneFragment);
     }
 
     @Override
@@ -17,13 +26,13 @@ public class TabAdapter extends FragmentPagerAdapter {
         switch (i){
 
             case 0:
-                return new ToDoFragment();
+                return toDoFragment;
 
             case 1:
-                return new ProgressFragment();
+                return progressFragment;
 
             case 2:
-                return new DoneFragment();
+                return doneFragment;
         }
         return null;
     }

@@ -16,9 +16,12 @@ public class TaskListAdadpter extends RecyclerView.Adapter<TaskListAdadpter.Task
     private Context context;
     private ArrayList<Task> list;
 
-    public TaskListAdadpter(Context context, ArrayList<Task> list) {
+    private ItemClickListener listener;
+
+    public TaskListAdadpter(Context context, ArrayList<Task> list, ItemClickListener listener) {
         this.context = context;
         this.list = list;
+        this.listener = listener;
     }
 
     @NonNull
@@ -55,7 +58,7 @@ public class TaskListAdadpter extends RecyclerView.Adapter<TaskListAdadpter.Task
             cardView = itemView.findViewById(R.id.cardView);
         }
 
-        void bindData(Task task){
+        void bindData(final Task task){
 
             textView.setText(task.getTitle());
             textView3.setText(task.getType().toString());
@@ -64,6 +67,8 @@ public class TaskListAdadpter extends RecyclerView.Adapter<TaskListAdadpter.Task
                 @Override
                 public void onClick(View v) {
 
+                    if(listener!=null)
+                        listener.onItemClick(task);
                 }
             });
         }
