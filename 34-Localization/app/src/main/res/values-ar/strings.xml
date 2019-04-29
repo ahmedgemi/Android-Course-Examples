@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">"تطبيقي"</string>
+
+    <string name="username">"الأسم
+"</string>
+    <string name="email">"الإميل
+"</string>
+    <string name="password">"كلمة السر"</string>
+    <string name="login">"تسجيل الدخول"</string>
+
+</resources>
