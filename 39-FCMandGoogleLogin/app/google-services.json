@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "132864211437",
+    "firebase_url": "https://my-app-2-30085.firebaseio.com",
+    "project_id": "my-app-2-30085",
+    "storage_bucket": "my-app-2-30085.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132864211437:android:ad6bfb3e6391295b",
+        "android_client_info": {
+          "package_name": "com.ahmed.fcmandgooglelogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132864211437-lpkmha8hcaihoaasn78p9nvpm3jsl570.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUZ11GRXXM_c3R5FWZJU-Eslg3KP_GlxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132864211437-lpkmha8hcaihoaasn78p9nvpm3jsl570.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
